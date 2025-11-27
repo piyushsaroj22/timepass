@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8" />
     <title>Piyush Saroj | Web Developer</title>
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content="Portfolio website of Piyush Saroj, a BCA student and aspiring web developer based in Mumbai." />
     <style>
@@ -346,6 +347,10 @@
             background: radial-gradient( circle at top left, rgba(148, 163, 184, 0.2), transparent);
         }
         
+        .pill:hover {
+            cursor: default;
+        }
+        
         .pill-accent {
             border-color: rgba(34, 197, 94, 0.5);
             color: #bbf7d0;
@@ -682,6 +687,13 @@
             box-shadow: 0 10px 20px rgba(15, 23, 42, 0.7);
         }
         
+        .skill-pill:hover {
+            transition-duration: 10ms;
+            border-color: var(--accent);
+            color: #f9fafb;
+            cursor: default;
+        }
+        
         .skill-pill strong {
             color: #bbf7d0;
         }
@@ -783,6 +795,13 @@
             justify-content: space-between;
             align-items: center;
             font-size: 0.8rem;
+        }
+        
+        .project-tech:hover {
+            transition-duration: 10ms;
+            border-color: var(--accent);
+            color: #f9fafb;
+            cursor: default;
         }
         
         .project-link {
