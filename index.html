@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content="Portfolio website of Piyush Saroj, a BCA student and aspiring web developer based in Mumbai." />
     <style>
-        /* ========== GLOBAL STYLES ========== */ 
+        /* ========== GLOBAL STYLES ========== */
         
          :root {
             --bg-color: #050816;
@@ -1044,7 +1044,7 @@
                             <span>Web Developer · BCA Student</span>
                         </div>
                         <h1 class="hero-title">
-                            Hi, I’m <span>Piyush&nbsp;Saroj</span><br /> a Web Developer.
+                            Hi, I’m <span>Piyush&nbsp;Saroj</span><br />a <span id="element"></span>
                         </h1>
                         <p class="hero-sub">
                             I’m a BCA student who loves building clean, modern web experiences using HTML, CSS, and JavaScript. I’m focused on learning, improving every day, and creating projects that actually work in the real world.
@@ -1515,7 +1515,15 @@
             form.reset();
         });
     </script>
-</body>
 
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+    <script>
+        var typed = new Typed('#element', {
+            strings: ['<i>Web</i> Developer.', 'Front-end Developer.', 'Back-end Learner.', 'Tech Enthusiast.'],
+            loop: true,
+            typeSpeed: 80,
+        });
+    </script>
+</body>
 
 </html>
