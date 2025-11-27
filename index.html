@@ -42,6 +42,7 @@
             background: radial-gradient(circle at top, #1f2937 0, #020617 50%, #000 100%);
             color: var(--text-main);
             line-height: 1.6;
+            overflow-x: hidden; /* mobile overflow fix */
         }
         
         img {
@@ -196,16 +197,15 @@
         /* Mobile nav */
         
         .nav-toggle {
-            display: none;
+            display: none; /* desktop pe hidden */
             cursor: pointer;
             width: 32px;
             height: 32px;
             border-radius: 999px;
             border: 1px solid rgba(148, 163, 184, 0.4);
-            display: flex;
+            background: radial-gradient(circle at top, rgba(148, 163, 184, 0.1), transparent);
             align-items: center;
             justify-content: center;
-            background: radial-gradient(circle at top, rgba(148, 163, 184, 0.1), transparent);
         }
         
         .nav-toggle span,
@@ -275,7 +275,7 @@
                 align-items: flex-start;
             }
             .nav-toggle {
-                display: flex;
+                display: flex; /* mobile pe show */
             }
         }
         /* ========== HERO ========== */
@@ -885,7 +885,7 @@
         }
         /* ========== CONTACT ========== */
         
-        .contact-grid {
+         .contact-grid {
             display: grid;
             grid-template-columns: minmax(0, 1.3fr) minmax(0, 1.7fr);
             gap: 2rem;
@@ -1029,6 +1029,39 @@
         
         @media (max-width: 600px) {
             .footer-inner {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+        }
+
+        /* Extra small mobiles tweaks */
+        @media (max-width: 480px) {
+            .container {
+                padding: 0 0.9rem;
+            }
+
+            .hero-title {
+                font-size: 2rem;
+            }
+
+            .section-heading {
+                font-size: 1.6rem;
+            }
+
+            .hero-meta {
+                gap: 0.5rem;
+            }
+
+            .pill {
+                font-size: 0.75rem;
+            }
+
+            .hero-actions .btn {
+                width: 100%;
+                justify-content: center;
+            }
+
+            .contact-row {
                 flex-direction: column;
                 align-items: flex-start;
             }
